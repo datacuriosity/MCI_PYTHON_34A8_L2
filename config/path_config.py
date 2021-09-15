@@ -8,3 +8,6 @@ class PathConfig:
     # File path
     CHURN_DATA_PATH = 'ChurnData.csv'
     FUEL_DATA_PATH = 'FuelConsumptionCo2.csv'
+
+    # Model
+    MODEL_PATH = 'saved_model'

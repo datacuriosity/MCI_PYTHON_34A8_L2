@@ -1,8 +1,11 @@
+from abc import ABC
+
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from base_modeler import BaseModeler
 
 
-class BostonLinearRegression:
+class BostonLinearRegression(BaseModeler):
 
     def __init__(self, X_train, X_test, y_train, y_test):
         self.X_train = X_train

@@ -1,6 +1,6 @@
 import pandas as pd
 from labeler.linear_regression_label import BostonLabeler
-from data_loader.boston_data_loader import split_train_test_data
+from data_loader.data_loader import split_train_test_data
 from modeler.boston_linear_regression import BostonLinearRegression
 
 boston_label = BostonLabeler()
