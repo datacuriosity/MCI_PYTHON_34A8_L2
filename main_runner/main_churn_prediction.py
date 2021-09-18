@@ -21,6 +21,9 @@ predicted = model.predict_label()
 
 results = pd.DataFrame({'predicted_label': predicted})
 results['CUSID'] = y_test.index
+results['true_label'] = y_test.values.tolist()
+results.set_index('CUSID', inplace=True)
+
 
 # Step 4: Evaluation
 model.evaluate(predicted)

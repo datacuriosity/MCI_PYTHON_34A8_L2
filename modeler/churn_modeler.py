@@ -34,4 +34,4 @@ class ChurnModel(BaseModeler):
 
     def save_model(self, path):
         with open(path, 'wb') as f:
-            pickle.dump(self, f)
+            pickle.dump(self.model, f)

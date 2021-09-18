@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 from config.path_config import PathConfig
+from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
 
@@ -15,6 +16,8 @@ class ChurnLabeler:
         ids = list(range(start, start + self.data.shape[0]))
         self.data['CUSID'] = ids
         self.data.set_index('CUSID', inplace=True)
+
+        self.data = pd.DataFrame(MinMaxScaler().fit_transform(self.data), columns=self.data.columns)
 
     def get_features_label(self):
 
